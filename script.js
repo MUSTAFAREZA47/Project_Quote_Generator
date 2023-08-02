@@ -26,10 +26,10 @@ function randomQuotes() {
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 
   //check if author field is blank and replace it with unknown
-  if (!quote.author) {
+  if (quote.author == "type.fit") {
     authorText.innerText = "Unknown";
   } else {
-    authorText.innerText = quote.author;
+    authorText.innerText = quote.author.replace(', type.fit', '');
   }
 
   //   check quote length to determine styling
